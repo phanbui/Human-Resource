@@ -1,0 +1,7 @@
+swig -python -py3 example.i
+gcc -fpic -c example.c example_wrap.c -I/usr/include/python3.8
+ld -shared example.o example_wrap.o -o _example.so
+
+swig -python -py3 helper.i
+gcc -fpic -c helper.c helper_wrap.c -I/usr/include/python3.8
+ld -shared helper.o helper_wrap.o -o _helper.so

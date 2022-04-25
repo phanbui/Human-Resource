@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="text-center mb-3">Staff Budget Summary</h1>
+
+    <br><br>
+    <div class="card mb-3">
+        <p>Total budget for Employees: ${{ sum_money }}</p>
+        <p>Average salary for Employees: ${{ avg_money }}</p>
+        <p>Total Employees: {{ employee_count }}</p>
+    </div>
+
+    <br><br><br><br>
+    <div class="card mb-3">
+        <p>Total budget for Frontend Developers: ${{ sum_money_frontend }}</p>
+        <p>Average salary for Frontend Developer: ${{ avg_money_frontend }}</p>
+        <p>Total Frontend Developers: {{ frontend_count }}</p>
+    </div>
+    
+
+    <br><br>
+    <div class="card mb-3">
+        <p>Total budget for Backend Developers: ${{ sum_money_backend }}</p>
+        <p>Average salary for Backend Developer: ${{ avg_money_backend }}</p>
+        <p>Total Backend Developers: {{ backend_count }}</p>
+    </div>
+    
+
+    <br><br>
+    <div class="card mb-3">
+        <p>Total budget for Fullstack Developers: ${{ sum_money_fullstack }}</p>
+        <p>Average salary for Fullstack Developer: ${{ avg_money_fullstack }}</p>
+        <p>Total Fullstack Developers: {{ fullstack_count }}</p>
+    </div>
+    
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="text-center mb-3">Project Timeline Summary</h1>
+    <br><br>
+    {% for project_name, start_date, end_date in project_date %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <p class="lead">Project Name: {{ project_name }}</p>
+                <p class="lead">Start Date: {{ start_date }}</p>
+                <p class="lead">End Date: {{ end_date }}</p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

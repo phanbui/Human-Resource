@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="text-center mb-3">Project Budget Summary</h1>
+    <br><br>
+    {% for project_name, budget in project_budget %}
+    <div class="card mb-3">
+        <div class="card-body">
+            <p class="lead">{{ project_name }}: ${{ budget }}</p>
+        </div>
+    </div>
+    {% endfor %}
+    
+{% endblock %}

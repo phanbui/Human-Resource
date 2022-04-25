@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="text-center mb-3">Available Resource Summary</h1>
+    <br><br>
+    {% for name, freetime in staff_freetime %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <p class="lead">{{ name }}: {{ freetime }}</p>
+            </div>
+        </div>
+    {% endfor %}
+    
+    <!-- <br><br><br><br><br>
+    <h1 class="text-center mb-3">Free Squad</h1> -->
+{% endblock %}
